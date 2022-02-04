@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 200ms linear;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Bungee Shade", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-weight: 500;
+  padding: 0.5rem 1.625rem;
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.nav__link {
+  color: #fff;
+}
+
+.nav__logo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.nav__lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact__links {
+  background-color: rgb(255, 231, 50);
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 200ms linear;
+}
+
+.contact__links:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.nav__item .contact__links {
+  color: #000;
+}
+
+.hero {
+  background-image: url("./images/annie-spratt-FSFfEQkd1sc-unsplash.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+
+  padding: 15rem 15rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero__container {
+  position: relative;
+  z-index: 100;
+
+  animation-name: hero--animation;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+}
+
+.hero__title {
+  color: rgb(255, 231, 50);
+  font-size: 4rem;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero__description {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero__btn,
+.contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__btn {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  background-color: rgb(255, 231, 50);
+  display: block;
+  margin: 0 auto;
+  transition: transform 200ms linear;
+}
+
+.hero__btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+@keyframes hero--animation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main {
+  padding: 5rem 0;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 10rem 0;
+}
+
+.grid__2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  gap: 2rem;
+}
+
+.about__grid--title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.about__grid--paragraph {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.grid__auto--fill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 2rem;
+}
+
+.tool {
+  align-self: center;
+  justify-self: center;
+}
+
+.grid__auto--row {
+  grid-auto-rows: 400px;
+}
+
+.card img {
+  height: 15rem;
+}
+
+.card__body {
+  margin-top: 1rem;
+}
+
+.card__body p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__control a {
+  background-color: rgb(255, 231, 50);
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+
+.form__panel {
+  padding: 0 10rem;
+}
+
+.form__panel input,
+.form__panel textarea {
+  border: none;
+  border-bottom: 3px solid rgb(50, 50, 50);
+  font-size: 1.25rem;
+  transition: all 200ms linear;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem 0;
+}
+
+.form__panel input:focus,
+.form__panel textarea:focus {
+  outline: none;
+  border-bottom: 3px solid rgb(255, 231, 50);
+}
+
+.form__panel input[placeholder],
+.form__panel textarea[placeholder] {
+  font-family: "Poppins", sans-serif;
+}
+
+.form__submit--btn {
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 600;
+  background-color: rgb(255, 231, 50);
+  transition: all 200ms linear;
+}
+
+.form__submit--btn:hover {
+  transform: translateY(-2px);
+}
+
+.home__btn {
+  padding: 1.5rem;
+  border-radius: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: rgb(255, 231, 50);
+
+  position: fixed;
+  top: 85%;
+  left: 92%;
+  z-index: 100;
+}
+
+.hide__home--btn {
+  display: none;
+}
+
+.hide__section {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+}
